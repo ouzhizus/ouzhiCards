@@ -1,6 +1,8 @@
 ﻿using System.Drawing;
+using System.Text;
 using Pastel;
 
+Console.OutputEncoding = Encoding.UTF8;
 Random rnd = new Random();
 string userName = Environment.UserName;
 string dirPath = "C:\\Users\\"+userName+"\\OneDrive\\Документы\\cardsLibrary";
@@ -54,7 +56,7 @@ else
         string? userFile = folderFile;
         string? path = "C:\\Users\\" + userName + "\\OneDrive\\Документы\\cardsLibrary\\" + userFile;
 
-        string[] lines = File.ReadAllLines(path);
+        string[] lines = File.ReadAllLines(path,Encoding.UTF8);
         if (lines.Length == 0)
         {
             Console.WriteLine("File is empty.");
@@ -81,8 +83,8 @@ else
             {
                 Console.WriteLine("----------------------");
                 int randomChooser = rnd.Next(0, origWords.Count);
-                Console.WriteLine($"{origWords[randomChooser]}".Pastel(ConsoleColor.Green));
-                Console.Write("Your guess: ".Pastel(Color.Crimson));
+                Console.WriteLine($" {origWords[randomChooser]}".Pastel(ConsoleColor.Green));
+                Console.Write(" Your guess: ".Pastel(Color.Crimson));
                 string userGuess = Console.ReadLine()!.ToLower();
                 if (userGuess.Equals("stop") || userGuess.Equals("exit"))
                 {
@@ -90,7 +92,7 @@ else
                     break;
                 }
 
-                Console.WriteLine("Translation: " + translatedWords[randomChooser].Pastel(ConsoleColor.Green));
+                Console.WriteLine(" Translation: " + translatedWords[randomChooser].Pastel(ConsoleColor.Green));
             }
         }
     }
