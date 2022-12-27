@@ -34,7 +34,7 @@ else
         int counter = 0;
         foreach (var file in allDirFiles)
         {
-            Console.WriteLine($"{counter + 1}) ".Pastel(ConsoleColor.DarkRed) +
+            Console.WriteLine($"{counter + 1}) ".Pastel(ConsoleColor.Red) +
                               file.Replace("C:\\Users\\" + userName + "\\OneDrive\\Документы\\cardsLibrary\\", ""));
             counter++;
         }
