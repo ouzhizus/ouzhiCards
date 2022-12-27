@@ -1,11 +1,48 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "Pastel/4.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/Pastel.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Pastel.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Pastel/4.1.0": {
+      "sha512": "2RGTLbvDyhUyZmNIAdyJZkQTr8RJwD/l4vEvFujLRZN2uxJal1AR8STe7rJwrYESO/Waaa20eYhVd4Q3KX+Nxw==",
+      "type": "package",
+      "path": "pastel/4.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "icon.png",
+        "lib/net462/Pastel.dll",
+        "lib/net462/Pastel.xml",
+        "lib/net6.0/Pastel.dll",
+        "lib/net6.0/Pastel.xml",
+        "lib/net7.0/Pastel.dll",
+        "lib/net7.0/Pastel.xml",
+        "pastel.4.1.0.nupkg.sha512",
+        "pastel.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "Pastel >= 4.1.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\ouzhi\\.nuget\\packages\\": {}
@@ -43,6 +80,12 @@
     "frameworks": {
       "net7.0": {
         "targetAlias": "net7.0",
+        "dependencies": {
+          "Pastel": {
+            "target": "Package",
+            "version": "[4.1.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

@@ -22,73 +22,77 @@ else
     if (allDirFiles.Length == 0)
     {
         Console.WriteLine("----------------------");
-        Console.WriteLine("Folder is empty.\n You should go to created folder and create new '.txt' file(s)");
-        Console.WriteLine("Tip: import words in format \n Word - Word");
-        Thread.Sleep(1000);
-        Console.WriteLine("Press any key to exit");
-        Console.ReadKey();
-    }
-    int counter = 0;
-    foreach (var file in allDirFiles)
-    {
-        Console.WriteLine($"{counter + 1}) ".Pastel(ConsoleColor.DarkRed) +
-                          file.Replace("C:\\Users\\" + userName + "\\OneDrive\\Документы\\cardsLibrary\\", ""));
-        counter++;
-    }
-
-    Console.WriteLine("----------------------");
-    Console.Write("Choose a file: ");
-    string userChoice = Console.ReadLine()!;
-    int userIntChoice = 0;
-    while (!Int32.TryParse(userChoice, out userIntChoice))
-    {
-        Console.Write("Please,input a number: ");
-        userChoice = Console.ReadLine()!;
-    }
-
-    string? folderFile = allDirFiles[userIntChoice-1]
-        .Replace("C:\\Users\\" + userName + "\\OneDrive\\Документы\\cardsLibrary\\", "");
-    string? userFile = folderFile;
-    string? path = "C:\\Users\\" + userName + "\\OneDrive\\Документы\\cardsLibrary\\" + userFile;
-
-    string[] lines = File.ReadAllLines(path);
-    if (lines.Length == 0)
-    {
-        Console.WriteLine("File is empty.");
-        Console.WriteLine("Tip: import words in format 'Word - Word'".Pastel(ConsoleColor.Green));
+        Console.WriteLine("Folder is empty.\nYou should go to created folder and create new '.txt' file(s)");
+        Console.WriteLine("Tip: import words in format Word - Word".Pastel(ConsoleColor.Cyan));
         Console.WriteLine("----------------------");
         Thread.Sleep(1000);
         Console.WriteLine("Press any key to exit".Pastel(ConsoleColor.Red));
         Console.ReadKey();
     }
-    else if(lines.Length >= 1)
+    else
     {
-        List<string> origWords = new List<string>();
-        List<string> translatedWords = new List<string>();
-        foreach (string line in lines)
+        int counter = 0;
+        foreach (var file in allDirFiles)
         {
-            string[] words = line.Split(" - ");
-            origWords.Add(words[0]);
-            translatedWords.Add(words[1]);
+            Console.WriteLine($"{counter + 1}) ".Pastel(ConsoleColor.DarkRed) +
+                              file.Replace("C:\\Users\\" + userName + "\\OneDrive\\Документы\\cardsLibrary\\", ""));
+            counter++;
         }
 
-        Console.Clear();
-        Console.WriteLine("To stop enter 'stop' or 'exit'");
-        while (true)
+        Console.WriteLine("----------------------");
+        Console.Write("Choose a file: ");
+        string userChoice = Console.ReadLine()!;
+        int userIntChoice = 0;
+        while (!Int32.TryParse(userChoice, out userIntChoice))
         {
+            Console.Write("Please,input a number: ");
+            userChoice = Console.ReadLine()!;
+        }
+
+        string? folderFile = allDirFiles[userIntChoice - 1]
+            .Replace("C:\\Users\\" + userName + "\\OneDrive\\Документы\\cardsLibrary\\", "");
+        string? userFile = folderFile;
+        string? path = "C:\\Users\\" + userName + "\\OneDrive\\Документы\\cardsLibrary\\" + userFile;
+
+        string[] lines = File.ReadAllLines(path);
+        if (lines.Length == 0)
+        {
+            Console.WriteLine("File is empty.");
+            Console.WriteLine("Tip: import words in format 'Word - Word'".Pastel(ConsoleColor.Green));
             Console.WriteLine("----------------------");
-            int randomChooser = rnd.Next(0, origWords.Count);
-            Console.WriteLine($"{origWords[randomChooser]}".Pastel(ConsoleColor.Green));
-            Console.Write("Your guess: ".Pastel(Color.Crimson));
-            string userGuess = Console.ReadLine()!.ToLower();
-            if (userGuess.Equals("stop") || userGuess.Equals("exit"))
+            Thread.Sleep(1000);
+            Console.WriteLine("Press any key to exit".Pastel(ConsoleColor.Red));
+            Console.ReadKey();
+        }
+        else if (lines.Length >= 1)
+        {
+            List<string> origWords = new List<string>();
+            List<string> translatedWords = new List<string>();
+            foreach (string line in lines)
             {
-                Console.WriteLine("----------------------");
-                break;
+                string[] words = line.Split(" - ");
+                origWords.Add(words[0]);
+                translatedWords.Add(words[1]);
             }
 
-            Console.WriteLine("Translation: " + translatedWords[randomChooser].Pastel(ConsoleColor.Green));
+            Console.Clear();
+            Console.WriteLine("To stop enter 'stop' or 'exit'");
+            while (true)
+            {
+                Console.WriteLine("----------------------");
+                int randomChooser = rnd.Next(0, origWords.Count);
+                Console.WriteLine($"{origWords[randomChooser]}".Pastel(ConsoleColor.Green));
+                Console.Write("Your guess: ".Pastel(Color.Crimson));
+                string userGuess = Console.ReadLine()!.ToLower();
+                if (userGuess.Equals("stop") || userGuess.Equals("exit"))
+                {
+                    Console.WriteLine("----------------------");
+                    break;
+                }
+
+                Console.WriteLine("Translation: " + translatedWords[randomChooser].Pastel(ConsoleColor.Green));
+            }
         }
     }
 }
-);
+    

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "jCOI2og4I53mGcknavffFKG18SkBEa6Gu7ieTAGMkXpdEn9PQGRd5xxHiQjsgVJ2VrGtpBbgtiFmyFuQ7ZkvPA==",
+  "dgSpecHash": "vV9CLosoRUBgkF7Hmz7hcesjyeLFNskQz+rkzsEXHOXWm3tn3TscjDzpUDz+nAwSxT0JgOwibeaucY56SotmLg==",
   "success": true,
   "projectFilePath": "C:\\Users\\ouzhi\\RiderProjects\\ouzhiCards\\ouzhiCards\\ouzhiCards.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ouzhi\\.nuget\\packages\\pastel\\4.1.0\\pastel.4.1.0.nupkg.sha512"
+  ],
   "logs": []
 }

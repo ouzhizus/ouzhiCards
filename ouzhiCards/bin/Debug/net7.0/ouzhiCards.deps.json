@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "ouzhiCards/1.0.0": {
+        "dependencies": {
+          "Pastel": "4.1.0"
+        },
+        "runtime": {
+          "ouzhiCards.dll": {}
+        }
+      },
+      "Pastel/4.1.0": {
+        "runtime": {
+          "lib/net7.0/Pastel.dll": {
+            "assemblyVersion": "4.1.0.0",
+            "fileVersion": "4.1.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ouzhiCards/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Pastel/4.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2RGTLbvDyhUyZmNIAdyJZkQTr8RJwD/l4vEvFujLRZN2uxJal1AR8STe7rJwrYESO/Waaa20eYhVd4Q3KX+Nxw==",
+      "path": "pastel/4.1.0",
+      "hashPath": "pastel.4.1.0.nupkg.sha512"
+    }
+  }
+}
