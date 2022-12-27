@@ -11,4 +11,4 @@
 1. Create a desktop shortcut to an exe file in ouzhiCards/ouzhiCards/bin/Debug/net7.0/ouzhiCards.exe
 1. Right-click on it,choose properties
 1. *If you want,you can change an icon
-1. Move to Font --> set Size = 18px, Font = JetBrains Mono Extrabold 
+1. Move to Font --> set Size = 18px, Font = JetBrains Mono Extrabold (you have to install it first)
