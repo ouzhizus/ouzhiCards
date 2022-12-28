@@ -44,14 +44,19 @@ else
         Console.WriteLine("----------------------");
         Console.Write(" Choose a file: ");
         string userChoice = Console.ReadLine()!;
-        int userIntChoice = 0;
-        while (!Int32.TryParse(userChoice, out userIntChoice)) //taking user's input as number to move to the folder
+        int userIntChoice = 0; //6
+        while (!Int32.TryParse(userChoice, out userIntChoice) || userIntChoice != 1 || userIntChoice != counter-1)
         {
-            Console.Write(" Please,input a number: ");
+            if (Enumerable.Range(0, counter).Contains(userIntChoice-1))
+            {
+                break;
+            }
+            Console.WriteLine(counter);
+            Console.Write(" \nPlease,input a valid number: ");
             userChoice = Console.ReadLine()!;
+            Console.WriteLine(userIntChoice);
         }
-
-        string? folderFile = allDirFiles[userIntChoice - 1] //we are showing user list starting from 1,so -1 to int
+        string? folderFile = allDirFiles[userIntChoice-1] //we are showing user list starting from 1,so -1 to int
             .Replace("C:\\Users\\" + userName + "\\OneDrive\\Документы\\cardsLibrary\\", "");
         //upgrading path to the file according to user choice
         string? path = "C:\\Users\\" + userName + "\\OneDrive\\Документы\\cardsLibrary\\" + folderFile;
