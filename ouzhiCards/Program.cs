@@ -51,8 +51,7 @@ else
             {
                 break;
             }
-            Console.WriteLine(fileCounter);
-            Console.Write(" \nPlease,input a valid number: ");
+            Console.Write(" Please,input a valid number: ");
             userStringFileChoice = Console.ReadLine()!;
             Console.WriteLine(userIntFileChoice);
         }
