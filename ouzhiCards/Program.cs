@@ -5,13 +5,13 @@ using Pastel;
 Console.OutputEncoding = Encoding.UTF8; //so we can see special symbols
 Random rnd = new Random();
 string userName = Environment.UserName;
-string dirPath = "C:\\Users\\"+userName+"\\OneDrive\\Документы\\cardsLibrary";
-if (!Directory.Exists(dirPath))
+string cardsLibraryDirectoryPath = "C:\\Users\\"+userName+"\\OneDrive\\Документы\\cardsLibrary";
+if (!Directory.Exists(cardsLibraryDirectoryPath))
 {
-    Directory.CreateDirectory(dirPath); //creating a folder if it doesn't exist
+    Directory.CreateDirectory(cardsLibraryDirectoryPath); //creating a folder if it doesn't exist
     Console.WriteLine("----------------------");
     Console.WriteLine(" Folder 'cards library was created at: \n".Pastel(ConsoleColor.White) +
-                      $"'{dirPath.Replace("\\cardsLibrary","")}'".Pastel(ConsoleColor.DarkCyan));
+                      $"'{cardsLibraryDirectoryPath.Replace("\\cardsLibrary","")}'".Pastel(ConsoleColor.DarkCyan));
     Console.WriteLine(" Folder is empty.\n You should go to created folder and create new '.txt' file(s)");
     Console.WriteLine(" Tip: import words in format \n Word - Word");
     Thread.Sleep(1000);
@@ -20,8 +20,8 @@ if (!Directory.Exists(dirPath))
 }
 else
 {
-    string[] allDirFiles = Directory.GetFiles(dirPath); //getting all content of folder
-    if (allDirFiles.Length == 0) //if the folder is empty ->
+    string[] allFilesInDirectory = Directory.GetFiles(cardsLibraryDirectoryPath); //getting all content of folder
+    if (allFilesInDirectory.Length == 0) //if the folder is empty ->
     {
         Console.WriteLine("----------------------");
         Console.WriteLine(" Folder is empty.\nYou should go to created folder and create new '.txt' file(s)");
@@ -33,30 +33,30 @@ else
     }
     else
     {
-        int counter = 0;
-        foreach (var file in allDirFiles) //Displaying all the files that Folder contains
+        int fileCounter = 0;
+        foreach (var file in allFilesInDirectory) //Displaying all the files that Folder contains
         {
-            Console.WriteLine($" {counter + 1}) ".Pastel(ConsoleColor.Red) +
+            Console.WriteLine($" {fileCounter + 1}) ".Pastel(ConsoleColor.Red) +
                               file.Replace("C:\\Users\\" + userName + "\\OneDrive\\Документы\\cardsLibrary\\", ""));
-            counter++;
+            fileCounter++;
         }
 
         Console.WriteLine("----------------------");
         Console.Write(" Choose a file: ");
-        string userChoice = Console.ReadLine()!;
-        int userIntChoice = 0; //6
-        while (!Int32.TryParse(userChoice, out userIntChoice) || userIntChoice != 1 || userIntChoice != counter-1)
+        string userStringFileChoice = Console.ReadLine()!;
+        int userIntFileChoice = 0; //6
+        while (!Int32.TryParse(userStringFileChoice, out userIntFileChoice) || userIntFileChoice != 1 || userIntFileChoice != fileCounter-1)
         {
-            if (Enumerable.Range(0, counter).Contains(userIntChoice-1))
+            if (Enumerable.Range(0, fileCounter).Contains(userIntFileChoice-1))
             {
                 break;
             }
-            Console.WriteLine(counter);
+            Console.WriteLine(fileCounter);
             Console.Write(" \nPlease,input a valid number: ");
-            userChoice = Console.ReadLine()!;
-            Console.WriteLine(userIntChoice);
+            userStringFileChoice = Console.ReadLine()!;
+            Console.WriteLine(userIntFileChoice);
         }
-        string? folderFile = allDirFiles[userIntChoice-1] //we are showing user list starting from 1,so -1 to int
+        string? folderFile = allFilesInDirectory[userIntFileChoice-1] //we are showing user list starting from 1,so -1 to int
             .Replace("C:\\Users\\" + userName + "\\OneDrive\\Документы\\cardsLibrary\\", "");
         //upgrading path to the file according to user choice
         string? path = "C:\\Users\\" + userName + "\\OneDrive\\Документы\\cardsLibrary\\" + folderFile;
@@ -87,8 +87,8 @@ else
             while (true) //here starts the gameplay
             {
                 Console.WriteLine("----------------------");
-                int randomChooser = rnd.Next(0, origWords.Count);
-                Console.WriteLine($" {origWords[randomChooser]}".Pastel(ConsoleColor.Green));
+                int randomPositionWord = rnd.Next(0, origWords.Count);
+                Console.WriteLine($" {origWords[randomPositionWord]}".Pastel(ConsoleColor.Green));
                 Console.Write(" Your guess: ".Pastel(Color.Crimson));
                 string userGuess = Console.ReadLine()!.ToLower();
                 if (userGuess.Equals("stop") || userGuess.Equals("exit"))
@@ -99,7 +99,7 @@ else
                     break;
                 }
 
-                Console.WriteLine(" Translation: " + translatedWords[randomChooser].Pastel(ConsoleColor.Green));
+                Console.WriteLine(" Translation: " + translatedWords[randomPositionWord].Pastel(ConsoleColor.Green));
             }
         }
     }
