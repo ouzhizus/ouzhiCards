@@ -53,7 +53,6 @@ else
             }
             Console.Write(" Please,input a valid number: ");
             userStringFileChoice = Console.ReadLine()!;
-            Console.WriteLine(userIntFileChoice);
         }
         string? folderFile = allFilesInDirectory[userIntFileChoice-1] //we are showing user list starting from 1,so -1 to int
             .Replace("C:\\Users\\" + userName + "\\OneDrive\\Документы\\cardsLibrary\\", "");
