@@ -5,7 +5,22 @@ using Pastel;
 Console.OutputEncoding = Encoding.UTF8; //so we can see special symbols
 Random rnd = new Random();
 string userName = Environment.UserName;
-string cardsLibraryDirectoryPath = "C:\\Users\\"+userName+"\\OneDrive\\Документы\\cardsLibrary";
+string OS_name = Environment.OSVersion.ToString();
+string cardsLibraryDirectoryPath = "";
+if (OS_name.Contains("Windows"))
+{
+    cardsLibraryDirectoryPath = "C:\\Users\\"+userName+"\\OneDrive\\Документы\\cardsLibrary";
+}
+else if (OS_name.Contains("untu") || OS_name.Contains("ora") || OS_name.Contains("Arch") || OS_name.Contains("nux") ||
+         OS_name.Contains("mint") || OS_name.Contains("Unix"))
+{
+    cardsLibraryDirectoryPath = "\\home\\"+userName+"\\Documents";
+}
+else
+{
+    Console.WriteLine("Your file system is not supported");
+}
+
 if (!Directory.Exists(cardsLibraryDirectoryPath))
 {
     Directory.CreateDirectory(cardsLibraryDirectoryPath); //creating a folder if it doesn't exist

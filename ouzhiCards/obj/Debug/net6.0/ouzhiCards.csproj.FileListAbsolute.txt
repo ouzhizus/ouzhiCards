@@ -1,0 +1,17 @@
+/home/ouzhizus/RiderProjects/ouzhiCards/ouzhiCards/bin/Debug/net6.0/ouzhiCards
+/home/ouzhizus/RiderProjects/ouzhiCards/ouzhiCards/bin/Debug/net6.0/ouzhiCards.deps.json
+/home/ouzhizus/RiderProjects/ouzhiCards/ouzhiCards/bin/Debug/net6.0/ouzhiCards.runtimeconfig.json
+/home/ouzhizus/RiderProjects/ouzhiCards/ouzhiCards/bin/Debug/net6.0/ouzhiCards.dll
+/home/ouzhizus/RiderProjects/ouzhiCards/ouzhiCards/bin/Debug/net6.0/ref/ouzhiCards.dll
+/home/ouzhizus/RiderProjects/ouzhiCards/ouzhiCards/bin/Debug/net6.0/ouzhiCards.pdb
+/home/ouzhizus/RiderProjects/ouzhiCards/ouzhiCards/bin/Debug/net6.0/Pastel.dll
+/home/ouzhizus/RiderProjects/ouzhiCards/ouzhiCards/obj/Debug/net6.0/ouzhiCards.csproj.AssemblyReference.cache
+/home/ouzhizus/RiderProjects/ouzhiCards/ouzhiCards/obj/Debug/net6.0/ouzhiCards.GeneratedMSBuildEditorConfig.editorconfig
+/home/ouzhizus/RiderProjects/ouzhiCards/ouzhiCards/obj/Debug/net6.0/ouzhiCards.AssemblyInfoInputs.cache
+/home/ouzhizus/RiderProjects/ouzhiCards/ouzhiCards/obj/Debug/net6.0/ouzhiCards.AssemblyInfo.cs
+/home/ouzhizus/RiderProjects/ouzhiCards/ouzhiCards/obj/Debug/net6.0/ouzhiCards.csproj.CoreCompileInputs.cache
+/home/ouzhizus/RiderProjects/ouzhiCards/ouzhiCards/obj/Debug/net6.0/ouzhiCards.csproj.CopyComplete
+/home/ouzhizus/RiderProjects/ouzhiCards/ouzhiCards/obj/Debug/net6.0/ouzhiCards.dll
+/home/ouzhizus/RiderProjects/ouzhiCards/ouzhiCards/obj/Debug/net6.0/ref/ouzhiCards.dll
+/home/ouzhizus/RiderProjects/ouzhiCards/ouzhiCards/obj/Debug/net6.0/ouzhiCards.pdb
+/home/ouzhizus/RiderProjects/ouzhiCards/ouzhiCards/obj/Debug/net6.0/ouzhiCards.genruntimeconfig.cache
