@@ -52,7 +52,7 @@ else
         foreach (var file in allFilesInDirectory) //Displaying all the files that Folder contains
         {
             Console.WriteLine($" {fileCounter + 1}) ".Pastel(ConsoleColor.Red) +
-                              file.Replace(cardsLibraryDirectoryPath, ""));
+                              file.Replace(cardsLibraryDirectoryPath+"/", ""));
             fileCounter++;
         }
 
