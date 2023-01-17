@@ -14,7 +14,7 @@ if (OS_name.Contains("Windows"))
 else if (OS_name.Contains("untu") || OS_name.Contains("ora") || OS_name.Contains("Arch") || OS_name.Contains("nux") ||
          OS_name.Contains("mint") || OS_name.Contains("Unix"))
 {
-    cardsLibraryDirectoryPath = "\\home\\"+userName+"\\Documents";
+    cardsLibraryDirectoryPath = "/home/"+userName+"/Documents/cardsLibrary";
 }
 else
 {
