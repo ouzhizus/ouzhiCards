@@ -5,14 +5,10 @@
       "Pastel/4.1.0": {
         "type": "package",
         "compile": {
-          "lib/net6.0/Pastel.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Pastel.dll": {}
         },
         "runtime": {
-          "lib/net6.0/Pastel.dll": {
-            "related": ".xml"
-          }
+          "lib/net6.0/Pastel.dll": {}
         }
       }
     }
@@ -92,8 +88,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -102,7 +97,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/ouzhizus/.dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
       }
     }
   }
