@@ -45,19 +45,19 @@
     ]
   },
   "packageFolders": {
-    "/home/ouzhizus/.nuget/packages/": {}
+    "C:\\Users\\ouzhi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ouzhizus/RiderProjects/ouzhiCards/ouzhiCards/ouzhiCards.csproj",
+      "projectUniqueName": "C:\\Users\\ouzhi\\RiderProjects\\ouzhiCards\\ouzhiCards\\ouzhiCards.csproj",
       "projectName": "ouzhiCards",
-      "projectPath": "/home/ouzhizus/RiderProjects/ouzhiCards/ouzhiCards/ouzhiCards.csproj",
-      "packagesPath": "/home/ouzhizus/.nuget/packages/",
-      "outputPath": "/home/ouzhizus/RiderProjects/ouzhiCards/ouzhiCards/obj/",
+      "projectPath": "C:\\Users\\ouzhi\\RiderProjects\\ouzhiCards\\ouzhiCards\\ouzhiCards.csproj",
+      "packagesPath": "C:\\Users\\ouzhi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ouzhi\\RiderProjects\\ouzhiCards\\ouzhiCards\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/ouzhizus/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\ouzhi\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -97,12 +97,30 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.11, 6.0.11]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.11, 6.0.11]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.11, 6.0.11]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.11, 6.0.11]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/ouzhizus/.dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

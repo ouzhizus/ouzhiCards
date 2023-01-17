@@ -5,14 +5,14 @@ using Pastel;
 Console.OutputEncoding = Encoding.UTF8; //so we can see special symbols
 Random rnd = new Random();
 string userName = Environment.UserName;
-string OS_name = Environment.OSVersion.ToString();
+string osName = Environment.OSVersion.ToString();
 string cardsLibraryDirectoryPath = "";
-if (OS_name.Contains("Windows"))
+if (osName.Contains("Windows"))
 {
     cardsLibraryDirectoryPath = "C:\\Users\\"+userName+"\\OneDrive\\Документы\\cardsLibrary";
 }
-else if (OS_name.Contains("untu") || OS_name.Contains("ora") || OS_name.Contains("Arch") || OS_name.Contains("nux") ||
-         OS_name.Contains("mint") || OS_name.Contains("Unix"))
+else if (osName.Contains("untu") || osName.Contains("ora") || osName.Contains("Arch") || osName.Contains("nux") ||
+         osName.Contains("mint") || osName.Contains("Unix"))
 {
     cardsLibraryDirectoryPath = "/home/"+userName+"/Documents/cardsLibrary";
 }
@@ -52,7 +52,7 @@ else
         foreach (var file in allFilesInDirectory) //Displaying all the files that Folder contains
         {
             Console.WriteLine($" {fileCounter + 1}) ".Pastel(ConsoleColor.Red) +
-                              file.Replace("C:\\Users\\" + userName + "\\OneDrive\\Документы\\cardsLibrary\\", ""));
+                              file.Replace(cardsLibraryDirectoryPath, ""));
             fileCounter++;
         }
 
