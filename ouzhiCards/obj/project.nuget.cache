@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "O3/yUq5vTkLIlrKOhjjN1eQFj+NQDKgfV1vcpiNYJ1/ntW6a2chZKLxiQEtyiuvM3T5DNG8T8sa1ahNdpYEXPw==",
+  "dgSpecHash": "ROvCV9DJjlqDneUssQEihin2qLIq+zqau196UEHST9vj9wc+fXrjJ6DQcNiNgDr1D9zaWlTbYMPx092+kjA5zA==",
   "success": true,
-  "projectFilePath": "/home/ouzhizus/RiderProjects/ouzhiCards/ouzhiCards/ouzhiCards.csproj",
+  "projectFilePath": "C:\\Users\\ouzhi\\RiderProjects\\ouzhiCards\\ouzhiCards\\ouzhiCards.csproj",
   "expectedPackageFiles": [
-    "/home/ouzhizus/.nuget/packages/pastel/4.1.0/pastel.4.1.0.nupkg.sha512"
+    "C:\\Users\\ouzhi\\.nuget\\packages\\pastel\\4.1.0\\pastel.4.1.0.nupkg.sha512",
+    "C:\\Users\\ouzhi\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.11\\microsoft.netcore.app.ref.6.0.11.nupkg.sha512",
+    "C:\\Users\\ouzhi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.11\\microsoft.windowsdesktop.app.ref.6.0.11.nupkg.sha512",
+    "C:\\Users\\ouzhi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.11\\microsoft.aspnetcore.app.ref.6.0.11.nupkg.sha512",
+    "C:\\Users\\ouzhi\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.11\\microsoft.netcore.app.host.win-x64.6.0.11.nupkg.sha512"
   ],
   "logs": []
 }

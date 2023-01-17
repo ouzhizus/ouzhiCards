@@ -14,4 +14,4 @@
 /home/ouzhizus/RiderProjects/ouzhiCards/ouzhiCards/obj/Debug/net6.0/ref/ouzhiCards.dll
 /home/ouzhizus/RiderProjects/ouzhiCards/ouzhiCards/obj/Debug/net6.0/ouzhiCards.pdb
 /home/ouzhizus/RiderProjects/ouzhiCards/ouzhiCards/obj/Debug/net6.0/ouzhiCards.genruntimeconfig.cache
-/home/ouzhizus/RiderProjects/ouzhiCards/ouzhiCards/bin/Debug/net6.0/ref/ouzhiCards.dll
+/home/ouzhizus/RiderProjects/ouzhiCards/ouzhiCards/obj/Debug/net6.0/refint/ouzhiCards.dll
