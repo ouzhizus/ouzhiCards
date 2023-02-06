@@ -9,6 +9,7 @@ string osName = Environment.OSVersion.ToString();
 string cardsLibraryDirectoryPath = "";
 if (osName.Contains("Windows"))
 {
+    //add a check for locale to change the Document folder name accordingly to a sys lang
     cardsLibraryDirectoryPath = "C:\\Users\\"+userName+"\\OneDrive\\Документы\\cardsLibrary";
 }
 else if (osName.Contains("untu") || osName.Contains("ora") || osName.Contains("Arch") || osName.Contains("nux") ||
